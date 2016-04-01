@@ -2,6 +2,7 @@
 import json
 import ConfigParser
 import urllib2
+import urllib
 
 sample_data = u'''{
 	"coord": {
@@ -53,13 +54,20 @@ class cur_weather:
         lang = conf.get('general', 'lang').strip()
         units = conf.get('general', 'units').strip()
 
+        params = {
+                    'id': city,
+                    'APPID': secret_key,
+                    'lang': lang,
+                    'units': units
+                 }
 
-        c_url = r'http://api.openweathermap.org/data/2.5/weather?' + 'id=' + city + '&' + \
-                'APPID=' + secret_key + '&' + \
-                'lang=' + lang + '&' + \
-                'units=' + units
+        params_prepeared = urllib.urlencode(params)
 
-        response = urllib2.urlopen(c_url).read()
+        c_url = r'http://api.openweathermap.org/data/2.5/weather'
+
+        request_data = c_url + '?' + params_prepeared
+
+        response = urllib2.urlopen(request_data).read()
         # response = sample_data
 
         self.raw_weather = json.loads(response, encoding='utf-8')
