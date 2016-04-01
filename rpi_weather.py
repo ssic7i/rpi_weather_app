@@ -38,8 +38,8 @@ class MainWindow(QtGui.QMainWindow):
         self.ui.lcdNumber_pres.display(float(cur_weather.get_pres()))
 
         title, descr = cur_weather.get_weather_text()
-        self.ui.label_weather_text.setText(str(title))
-        self.ui.label_weather_descr_text.setText(str(descr))
+        self.ui.label_weather_text.setText(title)
+        self.ui.label_weather_descr_text.setText(descr)
 
         self.ui.label_cloud_text.setText(str(cur_weather.get_clouds()))
 
@@ -47,6 +47,8 @@ class MainWindow(QtGui.QMainWindow):
         self.ui.label_wind_speed_text.setText(str(speed))
         self.ui.label_wind_dest_text.setText(str(dest))
 
+        date_of_data = datetime.datetime.fromtimestamp(cur_weather.get_timestamp())
+        self.ui.label_time_date.setText(str(date_of_data) + ' UTC')
 
     # http://stackoverflow.com/questions/5506781/pyqt4-application-on-windows-is-crashing-on-exit
     def closeEvent(self, event):

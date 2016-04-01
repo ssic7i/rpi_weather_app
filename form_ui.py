@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'form_ui.ui'
 #
-# Created: Thu Mar 31 23:34:44 2016
+# Created: Fri Apr 01 20:58:01 2016
 #      by: PyQt4 UI code generator 4.11.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -175,6 +175,22 @@ class Ui_Form(object):
         font.setWeight(75)
         self.label_weather_descr_text.setFont(font)
         self.label_weather_descr_text.setObjectName(_fromUtf8("label_weather_descr_text"))
+        self.label_7 = QtGui.QLabel(Form)
+        self.label_7.setGeometry(QtCore.QRect(10, 320, 141, 21))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_7.setFont(font)
+        self.label_7.setObjectName(_fromUtf8("label_7"))
+        self.label_time_date = QtGui.QLabel(Form)
+        self.label_time_date.setGeometry(QtCore.QRect(150, 320, 341, 21))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_time_date.setFont(font)
+        self.label_time_date.setObjectName(_fromUtf8("label_time_date"))
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -193,4 +209,6 @@ class Ui_Form(object):
         self.label_wind_speed_text.setText(_translate("Form", "Ветер:", None))
         self.label_wind_dest_text.setText(_translate("Form", "Ветер:", None))
         self.label_weather_descr_text.setText(_translate("Form", "Погода:", None))
+        self.label_7.setText(_translate("Form", "Время данных:", None))
+        self.label_time_date.setText(_translate("Form", "Время данных:", None))
 
