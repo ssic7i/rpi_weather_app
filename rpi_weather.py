@@ -43,13 +43,13 @@ class MainWindow(QtGui.QMainWindow):
         self.ui.lcdNumber_pres.display(float(cur_weather.get_pres()))
 
         title, descr = cur_weather.get_weather_text()
-        self.ui.label_weather_text.setText(title)
+        #self.ui.label_weather_text.setText(title)
         self.ui.label_weather_descr_text.setText(descr)
 
-        self.ui.label_cloud_text.setText(str(cur_weather.get_clouds()))
+        self.ui.label_cloud_text.setText(str(cur_weather.get_clouds()) + '%')
 
         speed, dest = cur_weather.get_wind_text()
-        self.ui.label_wind_speed_text.setText(str(speed))
+        self.ui.label_wind_speed_text.setText(str(speed) + u' м/с')
         self.ui.label_wind_dest_text.setText(str(dest))
 
         date_of_data = datetime.datetime.fromtimestamp(cur_weather.get_timestamp())

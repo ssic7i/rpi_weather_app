@@ -230,26 +230,6 @@
     <string>Облачность:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_weather_text">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>200</y>
-     <width>101</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>Погода:</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_cloud_text">
    <property name="geometry">
     <rect>
@@ -267,7 +247,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Облачность:</string>
+    <string>clouds text</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_9">
@@ -336,7 +316,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Ветер:</string>
+    <string>wind speed</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_wind_dest_text">
@@ -356,13 +336,13 @@
     </font>
    </property>
    <property name="text">
-    <string>Ветер:</string>
+    <string>wind direction</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_weather_descr_text">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>90</x>
      <y>200</y>
      <width>101</width>
      <height>21</height>
@@ -376,7 +356,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Погода:</string>
+    <string>weather text</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_7">
@@ -405,7 +385,7 @@
      <x>150</x>
      <y>320</y>
      <width>341</width>
-     <height>21</height>
+     <height>19</height>
     </rect>
    </property>
    <property name="font">
@@ -416,7 +396,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Время данных:</string>
+    <string>data time</string>
    </property>
   </widget>
  </widget>

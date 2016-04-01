@@ -53,14 +53,16 @@ class cur_weather:
         lang = conf.get('general', 'lang').strip()
         units = conf.get('general', 'units').strip()
 
+
         c_url = r'http://api.openweathermap.org/data/2.5/weather?' + 'id=' + city + '&' + \
                 'APPID=' + secret_key + '&' + \
-                'lang=' + lang  + '&' + \
+                'lang=' + lang + '&' + \
                 'units=' + units
 
-        response = urllib2.urlopen(c_url)
+        response = urllib2.urlopen(c_url).read()
+        # response = sample_data
 
-        self.raw_weather = json.loads(response.read(), encoding='utf-8')
+        self.raw_weather = json.loads(response, encoding='utf-8')
 
     def get_temp(self):
         return float(self.raw_weather['main']['temp'])

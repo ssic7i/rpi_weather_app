@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'form_ui.ui'
 #
-# Created: Fri Apr 01 20:58:01 2016
+# Created: Fri Apr 01 21:42:03 2016
 #      by: PyQt4 UI code generator 4.11.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -115,14 +115,6 @@ class Ui_Form(object):
         font.setWeight(75)
         self.label_6.setFont(font)
         self.label_6.setObjectName(_fromUtf8("label_6"))
-        self.label_weather_text = QtGui.QLabel(Form)
-        self.label_weather_text.setGeometry(QtCore.QRect(90, 200, 101, 21))
-        font = QtGui.QFont()
-        font.setPointSize(12)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_weather_text.setFont(font)
-        self.label_weather_text.setObjectName(_fromUtf8("label_weather_text"))
         self.label_cloud_text = QtGui.QLabel(Form)
         self.label_cloud_text.setGeometry(QtCore.QRect(130, 235, 111, 21))
         font = QtGui.QFont()
@@ -168,7 +160,7 @@ class Ui_Form(object):
         self.label_wind_dest_text.setFont(font)
         self.label_wind_dest_text.setObjectName(_fromUtf8("label_wind_dest_text"))
         self.label_weather_descr_text = QtGui.QLabel(Form)
-        self.label_weather_descr_text.setGeometry(QtCore.QRect(200, 200, 101, 21))
+        self.label_weather_descr_text.setGeometry(QtCore.QRect(90, 200, 101, 21))
         font = QtGui.QFont()
         font.setPointSize(12)
         font.setBold(True)
@@ -184,7 +176,7 @@ class Ui_Form(object):
         self.label_7.setFont(font)
         self.label_7.setObjectName(_fromUtf8("label_7"))
         self.label_time_date = QtGui.QLabel(Form)
-        self.label_time_date.setGeometry(QtCore.QRect(150, 320, 341, 21))
+        self.label_time_date.setGeometry(QtCore.QRect(150, 320, 341, 19))
         font = QtGui.QFont()
         font.setPointSize(12)
         font.setBold(True)
@@ -203,12 +195,11 @@ class Ui_Form(object):
         self.label_4.setText(_translate("Form", "Погода:", None))
         self.label_5.setText(_translate("Form", "Ветер:", None))
         self.label_6.setText(_translate("Form", "Облачность:", None))
-        self.label_weather_text.setText(_translate("Form", "Погода:", None))
-        self.label_cloud_text.setText(_translate("Form", "Облачность:", None))
+        self.label_cloud_text.setText(_translate("Form", "clouds text", None))
         self.label_9.setText(_translate("Form", "Давление", None))
-        self.label_wind_speed_text.setText(_translate("Form", "Ветер:", None))
-        self.label_wind_dest_text.setText(_translate("Form", "Ветер:", None))
-        self.label_weather_descr_text.setText(_translate("Form", "Погода:", None))
+        self.label_wind_speed_text.setText(_translate("Form", "wind speed", None))
+        self.label_wind_dest_text.setText(_translate("Form", "wind direction", None))
+        self.label_weather_descr_text.setText(_translate("Form", "weather text", None))
         self.label_7.setText(_translate("Form", "Время данных:", None))
-        self.label_time_date.setText(_translate("Form", "Время данных:", None))
+        self.label_time_date.setText(_translate("Form", "data time", None))
 
