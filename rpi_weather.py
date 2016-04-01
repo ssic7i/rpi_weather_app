@@ -14,6 +14,7 @@ class MainWindow(QtGui.QMainWindow):
         QtGui.QMainWindow.__init__(self)
         self.ui = Ui_Form()
         self.ui.setupUi(self)
+
         #set timer for time
         self.timer_time = QtCore.QTimer(self)
         self.timer_time.setInterval(1000)
@@ -22,9 +23,13 @@ class MainWindow(QtGui.QMainWindow):
 
         #set timer for weather
         self.timer_weather = QtCore.QTimer(self)
-        self.timer_weather.setInterval(1000)
+        self.timer_weather.setInterval(600000)
         self.timer_weather.timeout.connect(self.update_weather)
         self.timer_weather.start()
+
+        # update data first time
+        self.update_time()
+        self.update_weather()
 
     def update_time(self):
         cur_time = QtCore.QDateTime.currentDateTime()

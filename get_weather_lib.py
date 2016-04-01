@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import json
-
+import ConfigParser
+import urllib2
 
 sample_data = u'''{
 	"coord": {
@@ -45,7 +46,21 @@ sample_data = u'''{
 
 class cur_weather:
     def get_weather(self):
-        self.raw_weather = json.loads(sample_data, encoding='utf-8')
+        conf = ConfigParser.RawConfigParser()
+        conf.read('conf.cfg')
+        city = conf.get('general', 'city').strip()
+        secret_key = conf.get('general', 'secret_key').strip()
+        lang = conf.get('general', 'lang').strip()
+        units = conf.get('general', 'units').strip()
+
+        c_url = r'http://api.openweathermap.org/data/2.5/weather?' + 'id=' + city + '&' + \
+                'APPID=' + secret_key + '&' + \
+                'lang=' + lang  + '&' + \
+                'units=' + units
+
+        response = urllib2.urlopen(c_url)
+
+        self.raw_weather = json.loads(response.read(), encoding='utf-8')
 
     def get_temp(self):
         return float(self.raw_weather['main']['temp'])
