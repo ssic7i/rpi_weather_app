@@ -23,7 +23,7 @@ class MainWindow(QtGui.QMainWindow):
 
         #set timer for weather
         self.timer_weather = QtCore.QTimer(self)
-        self.timer_weather.setInterval(600000)
+        self.timer_weather.setInterval(1800000)
         self.timer_weather.timeout.connect(self.update_weather)
         self.timer_weather.start()
 
